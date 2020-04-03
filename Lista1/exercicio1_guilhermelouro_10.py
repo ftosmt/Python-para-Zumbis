@@ -1,16 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""
-Escreva um programa para calcular a redução do tempo de vida de um fumante. Pergunte a 
-quantidade de cigarros fumados por dia e quantos anos ele já fumou. Considere que um fumante 
-perde 10 minutos de vida a cada cigarro, calcule quantos dias de vida um fumante perderá. Exiba o 
-total de dias. 
-"""
-
-qntCigarros = int(input("Qnts cigarros por dia: "))
-anosFumando = int(input("Anos fumando: "))
-
-totalCigarros = (anosFumando * 365)*qntCigarros
-diasPerdidos = (totalCigarros * 10)/24
-
-print ('Dias perdidos %d' %diasPerdidos )
+cigarros = int(input('Quantos cigarros você fuma por dia: '))
+    anos = int(input('\nPor quantos anos você fuma: '))
+    minutosPerdidos = (cigarros * 10) * anos
+    diasPerdidos = minutosPerdidos / 1440 # 1440 é a quantidade de minutos que 1 dia tem
+    print('\nVocê perdeu {} dias da sua vida fumando'.format(round(diasPerdidos, 2))) # round, 2 é para arredondar em duas casas decimais
